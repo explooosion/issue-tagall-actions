@@ -2,7 +2,7 @@ name: Commit Issue Commenter
 
 on:
   issue_comment:
-    types: [created, edited]
+    types: created
 
 jobs:
   issueComment:
@@ -13,3 +13,4 @@ jobs:
         uses: explooosion/issue-tagall-actions@master
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          MEMO: ${{ '(Tag by actions)' }}
