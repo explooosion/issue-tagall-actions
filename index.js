@@ -14,6 +14,7 @@ const octokit = new Octokit({
 async function onIssueComment() {
   console.log('GITHUB_EVENT_PATH', process.env.GITHUB_EVENT_PATH)
   const evetJSON = await JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'))
+  console.log('Payload', evetJSON)
   const OWNER = evetJSON.repository.user.login;
   const REPOSITORY = evetJSON.repository.name;
   const NUMBER = evetJSON.issue.number;
