@@ -1,0 +1,15 @@
+name: Commit Issue Commenter
+
+on:
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  issueComment:
+    name: Comment From Issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Winnie Greet Actions
+        uses: explooosion/issue-tagall-actions@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}

@@ -1,0 +1,39 @@
+{
+  "name": "issue-tagall-actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/explooosion/issue-tagall-actions.git"
+  },
+  "keywords": [
+    "github",
+    "github-action",
+    "github-actions",
+    "issue",
+    "tagall",
+    "tag",
+    "mention"
+  ],
+  "author": {
+    "name": "Robby",
+    "email": "ta7382@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/explooosion/issue-tagall-actions/issues"
+  },
+  "homepage": "https://github.com/explooosion/issue-tagall-actions#readme",
+  "dependencies": {
+    "@octokit/rest": "^16.34.0",
+    "dotenv": "^8.2.0"
+  },
+  "engines": {
+    "node": ">= 8.12.0"
+  }
+}
