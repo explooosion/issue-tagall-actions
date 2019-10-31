@@ -11,8 +11,7 @@ LABEL "maintainer"="Robby <ta7382@gmail.com>"
 
 ADD entrypoint.sh /action/entrypoint.sh
 ADD package.json /action/package.json
-ADD app.js /action/app.js
-ADD utils.js /action/utils.js
+ADD index.js /action/index.js
 
 RUN chmod +x /action/entrypoint.sh
 
