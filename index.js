@@ -27,7 +27,7 @@ async function onIssueComment() {
     owner: OWNER,
     repo: REPOSITORY,
     issue_number: NUMBER,
-    body: `you said: ${BODY}`,
+    body: 'tag somebody.',
   };
 
   if (String(BODY).includes('/tagall')) {
