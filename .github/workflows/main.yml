@@ -2,7 +2,7 @@ name: Commit Issue Commenter
 
 on:
   issue_comment:
-    types: created
+    types: [created]
 
 jobs:
   issueComment:
