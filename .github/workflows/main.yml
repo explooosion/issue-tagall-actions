@@ -9,7 +9,7 @@ jobs:
     name: Comment From Issue
     runs-on: ubuntu-latest
     steps:
-      - name: Use Winnie Greet Actions
+      - name: Use Issue TagAll Actions
         uses: explooosion/issue-tagall-actions@master
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}

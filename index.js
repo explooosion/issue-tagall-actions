@@ -15,12 +15,13 @@ async function onIssueComment() {
   console.log('GITHUB_EVENT_PATH', process.env.GITHUB_EVENT_PATH)
   const evetJSON = await JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'))
   console.log('Payload', evetJSON)
+
   const OWNER = evetJSON.repository.owner.login;
   const REPOSITORY = evetJSON.repository.name;
   const NUMBER = evetJSON.issue.number;
   const Commnet = evetJSON.comment;
 
-  console.log('Comment Payload', eventCommnet);
+  console.log('Comment Payload', Commnet);
 
   //add a comment to the issue
   await octokit.issues.createComment({
