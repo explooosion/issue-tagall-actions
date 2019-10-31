@@ -1,0 +1,14 @@
+{
+  "repository": {
+    "name": "issue-tagall-actions",
+    "owner": {
+      "login": "explooosion"
+    }
+  },
+  "issue": {
+    "number": 1
+  },
+  "comment": {
+    "body": "/tagall"
+  }
+}
