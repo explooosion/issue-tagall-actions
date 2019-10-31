@@ -19,20 +19,22 @@ async function onIssueComment() {
   const OWNER = evetJSON.repository.owner.login;
   const REPOSITORY = evetJSON.repository.name;
   const NUMBER = evetJSON.issue.number;
-  const Commnet = evetJSON.comment;
+  const BODY = evetJSON.comment.body;
 
   console.log('Comment Payload', Commnet);
 
-  //add a comment to the issue
-  await octokit.issues.createComment({
-    owner: OWNER,
-    repo: REPOSITORY,
-    number: NUMBER,
-    body: `you said: ${Commnet.body}`,
-  }).then(({ data, headers, status }) => {
-    // handle data
-    console.log('BOT has send message.')
-  })
+  if (String(BODY).includes('/tagall')) {
+    //add a comment to the issue
+    await octokit.issues.createComment({
+      owner: OWNER,
+      repo: REPOSITORY,
+      issue_number: NUMBER,
+      body: `you said: ${Commnet.body}`,
+    }).then(({ data, headers, status }) => {
+      // handle data
+      console.log('BOT has send message.')
+    })
+  }
 }
 
 onIssueComment();
