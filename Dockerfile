@@ -11,6 +11,7 @@ LABEL "maintainer"="Robby <ta7382@gmail.com>"
 
 ADD entrypoint.sh /entrypoint.sh
 ADD package.json /package.json
+ADD yarn.lock /yarn.lock
 ADD index.js /index.js
 
 RUN chmod +x /entrypoint.sh
